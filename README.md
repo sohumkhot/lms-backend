@@ -30,7 +30,7 @@ Designed, Implemented and Hosted a full-stack web application for Loan Managemen
 
 - Create MongoDB Cluster: As we are using MongoDB Transactions in the backend, we need a replica set environment. So to keep the setup simple for now, I've used MongoDB Atlas for hosting a free-tier cluster which provides a replica set by default. Here's the [guide](https://www.mongodb.com/basics/clusters/mongodb-cluster-setup).
 
-- Create a file `config.env` in the config directory `config/config.env` with the following content:
+- Create a file `config.env` in the config directory as `config/config.env` with the following content:
 ```
 PORT=4000
 
