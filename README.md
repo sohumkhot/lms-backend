@@ -64,6 +64,12 @@ npm test
 ```
 Currently the tests are set to request the hosted URL. We can point it to local environment by changing the URL in test files.
 
+- Postman Collections
+```
+Local Postman Collection.json (For using local API)
+Staging Postman Collection.json (For using hosted API)
+```
+
 ### User Routes:
 1. `POST /api/v1/register`
 - Request Body:
