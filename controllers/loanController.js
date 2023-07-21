@@ -87,7 +87,12 @@ exports.approveLoanById = catchAsyncErrors(async (req, res, next) => {
 // Repay Loan by ID. This route will be used to repay an approved loan
 exports.repayLoanById = catchAsyncErrors(async (req, res, next) => {
   const session = await mongoose.startSession();
-  const { amount } = req.body;
+  let { amount } = req.body;
+  amount = parseFloat(amount);
+
+  if (!amount) {
+    return next(new ErrorHandler("Repayment amount should be specified", 400));
+  }
 
   // Start a MongoDB Transaction
   session.startTransaction();
@@ -101,11 +106,11 @@ exports.repayLoanById = catchAsyncErrors(async (req, res, next) => {
     }
 
     if (loan.status === "pending") {
-      return next(new ErrorHandler("Loan is pending approval", 200));
+      return next(new ErrorHandler("Loan is pending approval", 400));
     }
 
     if (loan.status === "paid") {
-      return next(new ErrorHandler("Loan is already paid", 200));
+      return next(new ErrorHandler("Loan is already paid", 400));
     }
 
     if (amount < loan.installments[0].amount) {
