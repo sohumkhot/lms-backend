@@ -1,6 +1,6 @@
 const request = require("supertest");
 
-const stagingURL = "http://localhost:4000"; // Replace this with the actual URL of your staging server
+const stagingURL = "https://loan-management-system-api.onrender.com"; // Replace this with the actual URL of your staging server
 
 describe("Loan Controller Tests", () => {
   let normalUserAuthToken; // This will hold the authentication token for the test user

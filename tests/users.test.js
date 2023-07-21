@@ -1,6 +1,6 @@
 const request = require("supertest");
 
-const stagingURL = "http://localhost:4000"; // Replace this with the actual URL of your staging server
+const stagingURL = "https://loan-management-system-api.onrender.com"; // Replace this with the actual URL of your staging server
 
 describe("User Controller Tests", () => {
   it("should register a new user", async () => {
