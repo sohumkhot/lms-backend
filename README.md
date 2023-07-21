@@ -298,5 +298,6 @@ loanId: string (Valid Loan ID)
 ```
 - Explanation:
 This route will be used only by the authenticated user to repay an approved loan.
+Used MongoDB transactions to maintain high consistency.
 It will mark the next due installment as paid. If all the installments are marked paid, the entire loan will be marked as paid.
 Error will be thrown if the loan is not approved or if the sent amount is less than the installment amount or if the loan is already paid.
