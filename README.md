@@ -23,6 +23,7 @@ Designed, Implemented and Hosted a full-stack web application for Loan Managemen
 - models: Contains the schemas for User and Loan documents
 - middleware: Contains the middleware for catching Async errors and Custom Error Handling
 - utils: Contains helper functions
+- tests: Contains tests for Users and Loan routes
 
 
 ### Backend Installation
