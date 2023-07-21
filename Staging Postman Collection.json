@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "74ea2366-9edc-460a-8ba9-f7e95d880f65",
+		"name": "Loan Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7996162",
+		"_collection_link": "https://warped-station-169799.postman.co/workspace/Zmags~83e1cf5c-f4d7-4f57-98b5-f56008acabf0/collection/7996162-74ea2366-9edc-460a-8ba9-f7e95d880f65?action=share&creator=7996162&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n      \"name\": \"Test User\",\n      \"email\": \"testuser123451@gmail.com\",\n      \"password\": \"testpassword\",\n      \"role\": \"admin\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://loan-management-system-api.onrender.com/api/v1/register",
+							"protocol": "https",
+							"host": [
+								"loan-management-system-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"a@a.com\",\n    \"password\": \"sohum123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://loan-management-system-api.onrender.com/api/v1/login",
+							"protocol": "https",
+							"host": [
+								"loan-management-system-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://loan-management-system-api.onrender.com/api/v1/logout",
+							"protocol": "https",
+							"host": [
+								"loan-management-system-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Loan",
+			"item": [
+				{
+					"name": "Create Loan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n      \"amount\": 1000,\n      \"numberOfInstallments\": 3\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://loan-management-system-api.onrender.com/api/v1/loans/create",
+							"protocol": "https",
+							"host": [
+								"loan-management-system-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"loans",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Repay Loan By ID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"amount\": 123214\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://loan-management-system-api.onrender.com/api/v1/loans/64ba2b87b5b34ed79e9f54bd/repayment",
+							"protocol": "https",
+							"host": [
+								"loan-management-system-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"loans",
+								"64ba2b87b5b34ed79e9f54bd",
+								"repayment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve Loan by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://loan-management-system-api.onrender.com/api/v1/loans/64ba2b87b5b34ed79e9f54bd/approve",
+							"protocol": "https",
+							"host": [
+								"loan-management-system-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"loans",
+								"64ba2b87b5b34ed79e9f54bd",
+								"approve"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Loans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://loan-management-system-api.onrender.com/api/v1/loans",
+							"protocol": "https",
+							"host": [
+								"loan-management-system-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"loans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Loan By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://loan-management-system-api.onrender.com/api/v1/loans/64ba31f6c3ed595137cb9b5f",
+							"protocol": "https",
+							"host": [
+								"loan-management-system-api",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"loans",
+								"64ba31f6c3ed595137cb9b5f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
